@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const successMessage = form.parentElement.querySelector('.success-message');
     const errorMessage = form.parentElement.querySelector('.error-message');
 
-    const API_URL = 'email-api-wheat.vercel.app/send-email-audity';
+    const API_URL = 'https://email-api-wheat.vercel.app/send-email-audity';
 
     form.addEventListener('submit', async function(e) {
         e.preventDefault(); // Megakadályozzuk az alapértelmezett form küldést
