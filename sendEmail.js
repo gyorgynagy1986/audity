@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const successMessage = form.parentElement.querySelector('.success-message');
     const errorMessage = form.parentElement.querySelector('.error-message');
 
+    // JAVÍTÁS: Teljes URL megadása explicit https:// protokollal
     const API_URL = 'https://email-api-wheat.vercel.app/send-email-audity';
 
     form.addEventListener('submit', async function(e) {
@@ -38,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Gomb letiltása és loading állapot
             setLoadingState(true);
             hideMessages();
+
+            console.log('API hívás indítása:', API_URL); // Debug log
 
             // API hívás - a meglévő /send-email-audity endpointhoz
             const response = await fetch(API_URL, {
