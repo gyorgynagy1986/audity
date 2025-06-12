@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const successMessage = form.parentElement.querySelector('.success-message');
     const errorMessage = form.parentElement.querySelector('.error-message');
 
-    // API endpoint URL - a meglévő szervered endpointja
-    const API_URL = 'http://localhost:3000/send-email-audity';
-    // Élesben: const API_URL = 'https://yourdomain.com/send-email-audity';
+    const API_URL = 'email-api-wheat.vercel.app/send-email-audity';
 
     form.addEventListener('submit', async function(e) {
         e.preventDefault(); // Megakadályozzuk az alapértelmezett form küldést
